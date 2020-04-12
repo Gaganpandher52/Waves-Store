@@ -13,6 +13,8 @@ app.use(bodyParser.urlencoded({entended:true}));
 app.use(bodyParser.json()); 
 app.use(cookieParser());
 
+const { User } = require('./models/user')
+
 //==================================
 //              USERS
 //==================================
