@@ -27,7 +27,7 @@ app.post('/api/users/register',(req,res)=>{
     if(err) return res.json({success:false,err});
     res.status(200).json({
       success:true,
-      userdata: doc.name
+      userdata: doc
     })
   })
 })
