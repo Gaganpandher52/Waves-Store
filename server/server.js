@@ -30,7 +30,18 @@ app.post('/api/users/register',(req,res)=>{
       userdata: doc
     })
   })
-})
+});
+
+app.post('/api/users/login',(req,res)=>{
+
+  User.findOne({'email':req.body.email},(err,user)=>{
+    if(!user) return res.json({loginSuccess:fasle})
+
+
+  })
+  
+
+});
 
 
 const port = process.env.PORT || 3002;
