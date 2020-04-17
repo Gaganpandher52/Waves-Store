@@ -35,12 +35,14 @@ app.post('/api/users/register',(req,res)=>{
 app.post('/api/users/login',(req,res)=>{
 
   User.findOne({'email':req.body.email},(err,user)=>{
-    if(!user) return res.json({loginSuccess:fasle})
+    if(!user) return res.json({loginSuccess:fasle,message:'Auth failes, email not found'})
 
+    user.comparePassword(req.body.password,(err,isMatch)=>{
+      if(!isMatch) return res.json({loginSuccess:'false',message:'Wrong Password'})
+
+    })
 
   })
-  
-
 });
 
 
