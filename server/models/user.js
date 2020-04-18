@@ -74,6 +74,12 @@ userSchema.methods.generateToken = function(){
   let user = this;
   let token = jwt.sign(user._id.teHexString(),process.env.SECRET);
 
+  user.token = token;
+  user.save(function(err,user){
+    if(err) return cb(err);
+    cb(null,user);
+  })
+
 }
 
 
