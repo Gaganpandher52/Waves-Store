@@ -40,6 +40,13 @@ app.post('/api/users/login',(req,res)=>{
     user.comparePassword(req.body.password,(err,isMatch)=>{
       if(!isMatch) return res.json({loginSuccess:'false',message:'Wrong Password'})
 
+      user.generateToken((err,user)=>{
+
+      })
+      
+
+
+
     })
 
   })
