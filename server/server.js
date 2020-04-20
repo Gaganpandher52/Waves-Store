@@ -42,7 +42,7 @@ app.post('/api/users/login',(req,res)=>{
 
       user.generateToken((err,user)=>{
         if(err) return res.status(400).send(err);
-        res.cookie('w_auth',user.token)
+        // res.cookie('w_auth',user.token)
       })
     })
   })
