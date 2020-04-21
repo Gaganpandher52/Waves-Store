@@ -13,11 +13,21 @@ app.use(bodyParser.urlencoded({entended:true}));
 app.use(bodyParser.json()); 
 app.use(cookieParser());
 
+// Models
 const { User } = require('./models/user');
+
+// MiddleWare
+const { auth } = require('./middleware/auth')
 
 //==================================
 //              USERS
 //==================================
+
+app.get('/api/users/auth',auth,(req,res)=>{
+
+})
+
+
 
 app.post('/api/users/register',(req,res)=>{
   res.status(200)
