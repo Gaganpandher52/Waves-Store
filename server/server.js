@@ -24,6 +24,10 @@ const { auth } = require('./middleware/auth')
 //==================================
 
 app.get('/api/users/auth',auth,(req,res)=>{
+  res.status(200).json({
+    user: req.user
+
+  })
 
 })
 
