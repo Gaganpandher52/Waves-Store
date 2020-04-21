@@ -70,9 +70,9 @@ userSchema.methods.comparePassword = function(candidatePassword, cb){
   })
 }
 
-userSchema.methods.generateToken = function(){
+userSchema.methods.generateToken = function(cb){
   let user = this;
-  let token = jwt.sign(user._id.teHexString(),process.env.SECRET);
+  let token = jwt.sign(user._id.toHexString(),process.env.SECRET);
 
   user.token = token;
   user.save(function(err,user){
