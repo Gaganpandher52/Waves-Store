@@ -20,6 +20,15 @@ const { User } = require('./models/user');
 const { auth } = require('./middleware/auth')
 
 //==================================
+//              BRAND
+//==================================
+
+app.post('/api/product/brand',auth,(req,res)=>{
+  
+
+})
+
+//==================================
 //              USERS
 //==================================
 
