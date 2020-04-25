@@ -8,3 +8,7 @@ const brandSchema = mongoose.Schema({
     maxlength:100
   }
 })
+
+const Brand = mongoose.model('Brand',brandSchema);
+
+module.exports = { Brand  }
