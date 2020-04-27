@@ -31,7 +31,7 @@ app.post('/api/product/brand',auth,(req,res)=>{
     if(err) return res.json({success:false,err})
     res.status(200).json({
       success:true,
-      // brand:doc
+      brand:doc
     })
   })
 
