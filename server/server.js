@@ -35,9 +35,18 @@ app.post('/api/product/brand',auth,admin,(req,res)=>{
       brand:doc
     })
   })
+})
 
+app.post('/api/product/get_brand',(req,res)=>{
+  Brand.find({},(err,brands)=>{
+    if(err) return res.status(400).send(err);
+    res.status(200).send(brands)
+  })
 
 })
+
+
+
 
 //==================================
 //              USERS
