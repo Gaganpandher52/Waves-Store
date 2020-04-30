@@ -18,13 +18,14 @@ const { User } = require('./models/user');
 const { Brand } = require('./models/brand');
 
 // MiddleWare
-const { auth } = require('./middleware/auth')
+const { auth } = require('./middleware/auth');
+const { admin } = require('./middleware/admin')
 
 //==================================
 //              BRAND
 //==================================
 
-app.post('/api/product/brand',auth,(req,res)=>{
+app.post('/api/product/brand',auth,admin,(req,res)=>{
   const brand = new Brand(req.body);
 
   brand.save((err,doc)=>{
