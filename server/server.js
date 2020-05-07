@@ -22,6 +22,16 @@ const { auth } = require('./middleware/auth');
 const { admin } = require('./middleware/admin')
 
 //==================================
+//              WOODS
+//==================================
+
+app.post('/api/product/wood',auth,admin,(req,res)=>{
+
+})
+
+
+
+//==================================
 //              BRAND
 //==================================
 
