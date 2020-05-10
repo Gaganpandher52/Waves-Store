@@ -10,6 +10,6 @@ const woodSchema = mongoose.Schema({
   }
 });
 
-const wood  = mongoose.model('Wood', woodSchema);
+const Wood  = mongoose.model('Wood', woodSchema);
 
 module.exports = { Wood }
