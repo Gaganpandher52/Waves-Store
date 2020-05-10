@@ -37,7 +37,10 @@ app.post('/api/product/wood',auth,admin,(req,res)=>{
       wood: doc
     })
   })
+});
 
+app.get('/api/product/wood',(req,res)=>{
+  
 })
 
 
