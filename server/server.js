@@ -20,7 +20,11 @@ const { Wood } = require('./models/wood');
 
 // MiddleWare
 const { auth } = require('./middleware/auth');
-const { admin } = require('./middleware/admin')
+const { admin } = require('./middleware/admin');
+
+//==================================
+//              PRODUCTS
+//==================================
 
 //==================================
 //              WOODS
@@ -46,8 +50,6 @@ app.get('/api/product/wood',(req,res)=>{
   })
 
 })
-
-
 
 //==================================
 //              BRAND

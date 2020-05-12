@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
 
-
 const woodSchema = mongoose.Schema({
   name:{
     required: true,
