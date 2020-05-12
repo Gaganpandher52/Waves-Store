@@ -1,5 +1,7 @@
 const mongoose = require('mongoose');
 
+const Schema = mongoose.Schema;
+
 const productSchema = mongoose.Schema({
   name:{
     required: true,
@@ -18,7 +20,12 @@ const productSchema = mongoose.Schema({
     maxlength:255,
   },
   brand:{
-    
+    type: Schema.Types.ObjectId,
+    ref: 'Brand',
+    required: true
+  },
+  shipping:{
+
   }
   
 });
