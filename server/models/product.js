@@ -25,7 +25,12 @@ const productSchema = mongoose.Schema({
     required: true
   },
   shipping:{
-
+    required: true,
+    type: Boolean
+  },
+  available:{
+    required: true,
+    type: Boolean
   }
   
 });
