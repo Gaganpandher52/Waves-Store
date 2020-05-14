@@ -31,6 +31,9 @@ const productSchema = mongoose.Schema({
   available:{
     required: true,
     type: Boolean
+  },
+  brand:{
+
   }
   
 });
