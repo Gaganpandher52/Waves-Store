@@ -32,9 +32,9 @@ const productSchema = mongoose.Schema({
     required: true,
     type: Boolean
   },
-  brand:{
+  // brand:{
 
-  }
+  // }
   
 });
 
