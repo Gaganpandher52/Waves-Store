@@ -43,12 +43,18 @@ const productSchema = mongoose.Schema({
   },
   sold:{
     type: Number,
-    maxlength: 100
-  }
-
-  
-  
-});
+    maxlength: 100,
+    default: 0
+  },
+  publish:{
+    required: true,
+    type: Boolean
+  },
+  images:{
+    type: Array,
+    default:[]
+  },
+},{timestamps:true});
 
 const Product = mongoose.model('Product',productSchema);
 
