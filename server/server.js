@@ -26,6 +26,10 @@ const { admin } = require('./middleware/admin');
 //              PRODUCTS
 //==================================
 
+app.post('/api/product/article',auth,admin,(req,res)=>{
+  
+})
+
 //==================================
 //              WOODS
 //==================================
