@@ -27,7 +27,12 @@ const { admin } = require('./middleware/admin');
 //==================================
 
 app.post('/api/product/article',auth,admin,(req,res)=>{
+  const product = new Product(req.body);
   
+  product.save((err,doc)=>{
+    if(err) return  res.json({success:false,err});
+  })
+
 })
 
 //==================================
