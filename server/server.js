@@ -17,6 +17,7 @@ app.use(cookieParser());
 const { User } = require('./models/user');
 const { Brand } = require('./models/brand');
 const { Wood } = require('./models/wood');
+const { Product } = require('./models/product')
 
 // MiddleWare
 const { auth } = require('./middleware/auth');
@@ -31,7 +32,7 @@ app.post('/api/product/article',auth,admin,(req,res)=>{
   
   product.save((err,doc)=>{
     if(err) return  res.json({success:false,err});
-    return status(200).json({
+    res.status(200).json({
       success: true,
       article: doc
     })
