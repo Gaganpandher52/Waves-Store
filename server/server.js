@@ -37,7 +37,6 @@ app.post('/api/product/article',auth,admin,(req,res)=>{
       article: doc
     })
   })
-
 })
 
 //==================================
