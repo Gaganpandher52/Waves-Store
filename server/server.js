@@ -27,6 +27,15 @@ const { admin } = require('./middleware/admin');
 //              PRODUCTS
 //==================================
 
+app.get('/api/product/article_by_id',(req,res)=>{
+  let type = req.query.type;
+  let items = req.query.id;
+
+  if(type === "array"){
+    let ids = req.query.id.split(',')
+  }
+})
+
 app.post('/api/product/article',auth,admin,(req,res)=>{
   const product = new Product(req.body);
   
