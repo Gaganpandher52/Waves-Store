@@ -41,7 +41,6 @@ const userSchema = mongoose.Schema({
   token:{
     type:String,
   }
-  
 })
 
 userSchema.pre('save',function(next){
