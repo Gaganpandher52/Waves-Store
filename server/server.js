@@ -46,8 +46,8 @@ app.post('/api/product/article',auth,admin,(req,res)=>{
   product.save((err,doc)=>{
     if(err) return  res.json({success:false,err});
     res.status(200).json({
-      success: true,
-      article: doc
+      // success: true,
+      // article: doc
     })
   })
 })
