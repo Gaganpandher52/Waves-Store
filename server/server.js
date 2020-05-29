@@ -35,13 +35,13 @@ app.get('/api/product/article_by_id',(req,res)=>{
     let ids = req.query.id.split(',');
     items = ["HSHSHSKSK","HSHSHSKSK"];
     items = ids.map(items=>{
-      // return mongoose.Types.ObjectId();
+      return mongoose.Types.ObjectId();
     })
   }
 })
 
 app.post('/api/product/article',auth,admin,(req,res)=>{
-
+  
   const product = new Product(req.body);
   
   product.save((err,doc)=>{
