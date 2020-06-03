@@ -38,6 +38,12 @@ app.get('/api/product/article_by_id',(req,res)=>{
       return mongoose.Types.ObjectId();
     })
   }
+  Product.
+  find({'_id':{$in:items}}).
+  exec((err,docs)=>{
+    return res.status(200).send(docs)
+
+  })
 })
 
 app.post('/api/product/article',auth,admin,(req,res)=>{
