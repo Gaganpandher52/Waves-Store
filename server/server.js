@@ -40,6 +40,8 @@ app.get('/api/product/articles_by_id',(req,res)=>{
   }
   Product.
   find({'_id':{$in:items}}).
+  populate('brand ').
+  populate('wood').
   exec((err,docs)=>{
     return res.status(200).send(docs)
 
