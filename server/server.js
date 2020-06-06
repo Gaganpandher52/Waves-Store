@@ -38,7 +38,11 @@ app.get('/api/product/articles',(res,req)=>{
   populate('brand').
   populate('wood').
   sort([[sortBy,order]]).
-  limit(limit)
+  limit(limit).
+  exec((err,articles)=>{
+    if(err) return res.status(400).send(err);
+    res.send(articles)
+  })
 
 })
 
